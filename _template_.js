@@ -3,116 +3,20 @@ class NewComicSource extends ComicSource {
     // Note: The fields which are marked as [Optional] should be removed if not used
 
     // name of the source
-    name = ""
+    name = "rokuhentai"
 
     // unique id of the source
-    key = ""
+    key = "roku"
 
     version = "1.0.0"
 
     minAppVersion = "1.4.0"
 
     // update url
-    url = ""
+    url = "https://rokuhentai.com"
 
-    /**
-     * [Optional] init function
-     */
-    init() {
-
-    }
-
-    // [Optional] account related
-    account = {
-        /**
-         * [Optional] login with account and password, return any value to indicate success
-         * @param account {string}
-         * @param pwd {string}
-         * @returns {Promise<any>}
-         */
-        login: async (account, pwd) => {
-            /*
-            Use Network to send request
-            Use this.saveData to save data
-            `account` and `pwd` will be saved to local storage automatically if login success
-            ```
-            let res = await Network.post('https://example.com/login', {
-                'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
-            }, `account=${account}&password=${pwd}`)
-
-            if(res.status == 200) {
-                let json = JSON.parse(res.body)
-                this.saveData('token', json.token)
-                return 'ok'
-            }
-
-            throw 'Failed to login'
-            ```
-            */
-
-        },
-
-        /**
-         * [Optional] login with webview
-         */
-        loginWithWebview: {
-            url: "",
-            /**
-             * check login status
-             * @param url {string} - current url
-             * @param title {string} - current title
-             * @returns {boolean} - return true if login success
-             */
-            checkStatus: (url, title) => {
-
-            },
-            /**
-             * [Optional] Callback when login success
-             */
-            onLoginSuccess: () => {
-
-            },
-        },
-
-        /**
-         * [Optional] login with cookies
-         * Note: If `this.account.login` is implemented, this will be ignored
-         */
-        loginWithCookies: {
-            fields: [
-                "ipb_member_id",
-                "ipb_pass_hash",
-                "igneous",
-                "star",
-            ],
-            /**
-             * Validate cookies, return false if cookies are invalid.
-             *
-             * Use `Network.setCookies` to set cookies before validate.
-             * @param values {string[]} - same order as `fields`
-             * @returns {Promise<boolean>}
-             */
-            validate: async (values) => {
-
-            },
-        },
-
-        /**
-         * logout function, clear account related data
-         */
-        logout: () => {
-            /*
-            ```
-            this.deleteData('token')
-            Network.deleteCookies('https://example.com')
-            ```
-            */
-        },
-
-        // {string?} - register url
-        registerWebsite: null
-    }
-
+    
+    
     // explore page list
     explore = [
         {
